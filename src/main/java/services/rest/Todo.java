@@ -1,17 +1,18 @@
-package org.rest.com;
+package services.rest;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/hello")
-public class Hello {
+@Path("/todo")
+public class Todo {
 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String sayPlainTextHello() {
-		return "Hello Jersey";
+		return "Invoke with JSON!";
 	}
 
 	@GET
@@ -26,5 +27,25 @@ public class Hello {
 		return "<html> " + "<title>" + "Hello Jersey" + "</title>" + "<body><h1>" + "Hello Jersey" + "</body></h1>"
 				+ "</html> ";
 	}
+
+//	@POST
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public ArrayList<Task> getTodos() {
+//
+//		return "<html> " + "<title>" + "Hello Jersey" + "</title>" + "<body><h1>" + "Hello Jersey" + "</body></h1>"
+//				+ "</html> ";
+//	}
+//
+//	@POST
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public void addTask() {
+//
+//	}
+//
+//	@POST
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public void addTask() {
+//
+//	}
 
 }

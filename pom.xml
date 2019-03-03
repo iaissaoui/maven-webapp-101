@@ -1,27 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>maven-webapps</groupId>
-  <artifactId>maven-webapp-101</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>maven-webapp-101 Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-      <properties>
-        <jersey2.version>2.19</jersey2.version>
-        <jaxrs.version>2.0.1</jaxrs.version>
-    </properties>
-     
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    
-    		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>maven-webapps</groupId>
+	<artifactId>maven-webapp-101</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>maven-webapp-101 Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<jersey2.version>2.19</jersey2.version>
+		<jaxrs.version>2.0.1</jaxrs.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -36,56 +37,43 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 
-		<!--  -->
-        <!-- JAX-RS -->
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>${jaxrs.version}</version>
-        </dependency>
-        <!-- Jersey 2.19 -->
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>${jersey2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>${jersey2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-client</artifactId>
-            <version>${jersey2.version}</version>
-        </dependency>
 
-		<!-- Jersey -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.glassfish.jersey.containers</groupId> -->
-<!-- 			<artifactId>jersey-container-servlet</artifactId> -->
-<!-- 			<version>2.26</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.glassfish.jersey.media</groupId> -->
-<!-- 			<artifactId>jersey-media-json-jackson</artifactId> -->
-<!-- 			<version>2.26</version> -->
-<!-- 		</dependency>  -->
-		
-		
-		<!-- Jersey Client -->
-		
-<!-- 		<dependency> -->
-<!--             <groupId>org.glassfish.jersey.core</groupId> -->
-<!--             <artifactId>jersey-client</artifactId> -->
-<!--             <version>2.26</version> -->
-<!--         </dependency> -->
-        
-    
-  </dependencies>
-  <build>
-    <finalName>maven-webapp-101</finalName>
-  </build>
+		<!-- -->
+		<!-- JAX-RS -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${jaxrs.version}</version>
+		</dependency>
+		<!-- Jersey 2.19 -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+
+
+
+
+	</dependencies>
+	<build>
+		<finalName>maven-webapp-101</finalName>
+	</build>
 </project>
