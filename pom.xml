@@ -7,6 +7,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>maven-webapp-101 Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+      <properties>
+        <jersey2.version>2.19</jersey2.version>
+        <jaxrs.version>2.0.1</jaxrs.version>
+    </properties>
+     
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -31,17 +37,52 @@
 		</dependency>
 
 
+
+		<!--  -->
+        <!-- JAX-RS -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        <!-- Jersey 2.19 -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+
 		<!-- Jersey -->
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>2.26</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jackson</artifactId>
-			<version>2.26</version>
-		</dependency> 
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jersey.containers</groupId> -->
+<!-- 			<artifactId>jersey-container-servlet</artifactId> -->
+<!-- 			<version>2.26</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jersey.media</groupId> -->
+<!-- 			<artifactId>jersey-media-json-jackson</artifactId> -->
+<!-- 			<version>2.26</version> -->
+<!-- 		</dependency>  -->
+		
+		
+		<!-- Jersey Client -->
+		
+<!-- 		<dependency> -->
+<!--             <groupId>org.glassfish.jersey.core</groupId> -->
+<!--             <artifactId>jersey-client</artifactId> -->
+<!--             <version>2.26</version> -->
+<!--         </dependency> -->
+        
     
   </dependencies>
   <build>
