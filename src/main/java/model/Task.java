@@ -12,4 +12,18 @@ public class Task {
 		this.name = name;
 	}
 
+	public Task(String name) {
+		super();
+		this.name = name;
+	}
+
+	public Task() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Task [name=" + name + "]";
+	}
+
 }

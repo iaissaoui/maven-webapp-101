@@ -68,6 +68,22 @@
 			<artifactId>jersey-client</artifactId>
 			<version>${jersey2.version}</version>
 		</dependency>
+		
+		
+		<!-- Apache Implementation -->
+		<dependency>
+  <groupId>com.sun.jersey.contribs</groupId>
+  <artifactId>jersey-apache-client</artifactId>
+  <version>1.13</version>
+  <type>jar</type>
+</dependency> 
+		
+		
+<dependency>
+    <groupId>org.glassfish.jersey.media</groupId>
+    <artifactId>jersey-media-json-jackson</artifactId>
+    <version>${jersey2.version}</version>
+</dependency>
 
 
 

@@ -1,8 +1,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page session="true"%>
-<%@page import ="java.util.ArrayList"%>
-<%@page import ="java.util.List"%>
-<%@page import ="model.Task"%>
+<%@page import="java.util.*"%>
+<%@page import="model.Task"%>
 
 
 <link rel="stylesheet"
@@ -21,7 +20,8 @@
 		</h1>
 		<form id="form101" role="form" method="POST" action="Main">
 			<input type="text" class="form-control" placeholder="Your Task"
-				name="task">
+				name="task"> <input type="hidden" class="form-control"
+				name="action" value="add">
 		</form>
 		<button type="submit" form="form101" type="button"
 			class="btn btn btn-primary">Add</button>
@@ -30,15 +30,26 @@
 
 	<div>
 		<ul class="list-group">
-	
-	
-<%-- 		<%  ArrayList<Task> L =  (ArrayList<Task>) request.getSession().getAttribute("list"); %> --%>
-  
-  
+
+
+					<%  Set<Task> L =  (HashSet<Task>) request.getSession().getAttribute("list"); System.out.println(L);%> 
+
+
+
 			<c:forEach var="item" items="${sessionScope.list}">
-				<li class="list-group-item"><c:out value="${item.name}" /></li>
+				<li class="list-group-item"><c:out value="${item.name}" />
+
+					<form id="${item.name}" role="form" method="POST" action="Main">
+						<input type="hidden" class="form-control" name="action"
+							value="remove">
+						<input type="hidden" class="form-control"
+							name= "task" value="${item.name}">
+					</form>
+					<button type="submit" form="${item.name}" type="button"
+						class="btn btn btn-primary">Delete</button>
+				</li>
 			</c:forEach>
- 
+
 		</ul>
 
 	</div>
